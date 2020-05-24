@@ -6,6 +6,7 @@
     <title></title>
   </head>
   <body>
+    <div class="container">
     <form class="" action="login_handler.php" method="post">
 <?php
 if (session_status()==PHP_SESSION_NONE) {
@@ -21,17 +22,11 @@ if (isset($_SESSION['Success'])) {
   unset($_SESSION['login_success']);
   // code...
 }
-
-
-
-
- ?>
-
-
-
-      <input type="email" name="email" value=""> <br>
-      <input type="password" name="pass" value=""> <br>
-      <input type="submit" name="" value="Login">
+?>
+<input type="email" class="form-control" name="email" value=""> <br>
+<input type="password" class="form-control" name="pass" value=""> <br>
+<input type="submit" class="form-control"name="" value="Login">
     </form>
+  </div>
   </body>
 </html>
