@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-  <style media="screen">
+  <!-- <style media="screen">
   /* <meta name="viewport",content="width=device-width,initial-scale=1"> */
 .app{
   background-color: #bebebe;
@@ -35,24 +35,30 @@ color: #ffffff;
 }
 
 
-  </style>
-
+  </style> -->
     <title>Registration</title>
+    <?php include 'bootstrap.php';?>
+    <style media="screen">
+      .form-control{
+        border: 1px solid #00f;
+      }
+    </style>
   </head>
   <body>
+<div class="container">
 
-    <form class="app" action="registration_handler.php" method="post">
+    <form class="form-group" action="registration_handler.php" method="post">
 
         <h2><i>Registration</i></h2>
-      Name: <input type="text" class="btn" name="name" value=""><br>
+      Name: <input class="form-control" class="form-control" type="text" class="btn" name="name" value=""><br>
       <br>
-    Username:<input type="text" name="username" value=""><br>
+    Username:<input class="form-control" class="form-control" type="text" name="username" value=""><br>
     <br>
-    DOB:<input type="date" name="dob" value=""><br>
+    DOB:<input class="form-control" type="date" name="dob" value=""><br>
     <br>
 
-    <p>Select your Gender:</p><input type="radio" name='gender' value='male'> male
-    <input type="radio" name='gender' value='female'>female
+    <p>Select your Gender:</p><input class="form-control" type="radio" name='gender' value='male'> male
+    <input class="form-control" type="radio" name='gender' value='female'>female
 
 
   <p>Select your Age:</p><select class="" name="age">
@@ -64,18 +70,19 @@ color: #ffffff;
       <option value="1">Under 18</option>
     </select><br>
     <br>
-    Email:<input type="email" name="mail" value=""><br>
+    Email:<input class="form-control" type="email" name="mail" value=""><br>
     <br>
-    Password:<input type="password" name="pword" value=""><br>
+    Password:<input class="form-control" type="password" name="pword" value=""><br>
     <br>
 
-<input type="checkbox" name="check" value="">
+<input class="form-control" type="checkbox" name="check" value="">
   I agree with the <cite>terms & conditions.</cite><br>
 <br>
-      <input type="submit" name="" value="submit">
+      <input class="form-control" type="submit" name="" value="submit">
 
 
     </form>
-
+    
+  </div>
   </body>
 </html>
