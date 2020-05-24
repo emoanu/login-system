@@ -12,12 +12,21 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 
   $sql ="INSERT into users (id,name,username,email,password,gender,age_group,dob) values(NULL,'$name','$username','$email','$pass','$gender','$age','$dob')";
   $result = mysqli_query($con,$sql);
-  if ('session_status'==[PHP_SESSION_NONE];) {
-    session_start()
+  if ('session_status'==PHP_SESSION_NONE) {
+    session_start();
+    // code...
+  }
+  if ($result) {
+    $_SESSION['login_success']="Your account has been successfully registered.You can login now.";
+    header('location:login.php');
+    // code...
+  }else {
+    echo "Register again";
+    header('location:registration.php')
     // code...
   }
 
     // code...
-  
+
 
  ?>
