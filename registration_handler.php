@@ -22,11 +22,11 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     // code...
   }else {
     echo "Register again";
-    header('location:registration.php')
+    header('location:registration.php');
     // code...
   }
 
     // code...
 
-
+}
  ?>
