@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-  <style media="screen">
+  <!-- <style media="screen"> -->
+  <!--
   /* <meta name="viewport",content="width=device-width,initial-scale=1"> */
-.app{
+/* .app{
   background-color: #bebebe;
   background-origin: content-box;
   background-attachment: scroll;
@@ -35,7 +36,7 @@ color: #ffffff;
 }
 
 
-  </style>
+  </style> */ -->
 
     <title>Registration</title>
   </head>
