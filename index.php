@@ -6,6 +6,7 @@
     <?php
     include 'bootstrap.php';
     ?>
+    
   </head>
   <body>
     <div class="container">

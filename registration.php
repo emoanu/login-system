@@ -37,26 +37,35 @@ color: #ffffff;
 
 
   </style> */ -->
+  <<?php
+  include 'bootstrap.php' ?>
+  <style media="screen">
+    .container{
+      background-color: #dedeed;
+    }
+  </style>
 
     <title>Registration</title>
   </head>
   <body>
+<div class="container">
 
-    <form class="app" action="registration_handler.php" method="post">
+
+    <form class="" action="registration_handler.php" method="post">
 
         <h2><i>Registration</i></h2>
-      Name: <input type="text" class="btn" name="name" value=""><br>
+      Name: <input type="text" class="form-control" name="name" value=""><br>
       <br>
-    Username:<input type="text" name="username" value=""><br>
+    Username:<input type="text" class="form-control"name="username" value=""><br>
     <br>
-    DOB:<input type="date" name="dob" value=""><br>
+    DOB:<input type="date" class="form-control"name="dob" value=""><br>
     <br>
 
-    <p>Select your Gender:</p><input type="radio" name='gender' value='male'> male
-    <input type="radio" name='gender' value='female'>female
+    <p>Select your Gender:</p><input type="radio" class="form-control"name='gender' value='male'> male
+    <input type="radio" class="form-control"name='gender' value='female'>female
 
 
-  <p>Select your Age:</p><select class="" name="age">
+  <p>Select your Age:</p><select class="form-control" name="age">
 
     <option value="5">65+</option>
       <option value="4">50 - 64</option>
@@ -65,18 +74,19 @@ color: #ffffff;
       <option value="1">Under 18</option>
     </select><br>
     <br>
-    Email:<input type="email" name="mail" value=""><br>
+    Email:<input type="email" class="form control" name="mail" value=""><br>
     <br>
-    Password:<input type="password" name="pword" value=""><br>
+    Password:<input type="password" class="form-control"name="pword" value=""><br>
     <br>
 
-<input type="checkbox" name="check" value="">
+<input type="checkbox" class="form-control" name="check" value="">
   I agree with the <cite>terms & conditions.</cite><br>
 <br>
-      <input type="submit" name="" value="submit">
+      <input type="submit" class="form-control"name="" value="submit">
 
 
     </form>
+    </div>
 
   </body>
 </html>

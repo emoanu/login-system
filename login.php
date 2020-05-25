@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8">
     <?php include 'bootstrap.php'; ?>
-    <title></title>
+    <style media="screen">
+      .container{
+        background-color: #dedede;
+      }
+    </style>
+    <title>Login</title>
   </head>
   <body>
     <div class="container">
@@ -18,7 +23,7 @@ if (isset($_SESSION['login_error'])) {
   unset($_SESSION['login_error']);
 }
 if (isset($_SESSION['Success'])) {
-  echo "echo class=success".$_SESSION['login_success']."</span>";
+  echo "<span class=success".$_SESSION['login_success']."</span>";
   unset($_SESSION['login_success']);
   // code...
 }
