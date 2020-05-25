@@ -6,7 +6,7 @@
     <?php
     include 'bootstrap.php';
     ?>
-    
+
   </head>
   <body>
     <div class="container">
@@ -26,6 +26,7 @@
       }
       else{
       ?>
+      <h2>Login if you already have an account or register now.</h2>
       <a href="login.php" class="btn btn-primary">Login</a>
       <a href="registration.php" class="btn btn-warning">Register</a>
     <?php }

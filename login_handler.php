@@ -25,7 +25,7 @@ if (session_status()==PHP_SESSION_NONE) {
   }
   // code...
   else {
-  $_SESSION['login_error']="Invalid email/password";
+  $_SESSION['login_error']="Invalid email/password.Try again";
   header('location:login.php');
   // code...
 }

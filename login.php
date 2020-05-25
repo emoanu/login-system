@@ -19,11 +19,11 @@ if (session_status()==PHP_SESSION_NONE) {
   // code...
 }
 if (isset($_SESSION['login_error'])) {
-  echo "<span class=error".$_SESSION['login_error']."</span>";
+  echo "<span class=error>".$_SESSION['login_error']."</span>";
   unset($_SESSION['login_error']);
 }
 if (isset($_SESSION['Success'])) {
-  echo "<span class=success".$_SESSION['login_success']."</span>";
+  echo "<span class=success>".$_SESSION['login_success']."</span>";
   unset($_SESSION['login_success']);
   // code...
 }

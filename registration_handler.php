@@ -17,11 +17,13 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     // code...
   }
   if ($result) {
-    $_SESSION['login_success']="Your account has been successfully registered.You can login now.";
+
+    $_SESSION['login_success']="Your account has been successfully registered.You can login now."; 
+
     header('location:login.php');
     // code...
   }else {
-    echo "Register again";
+    echo "Try again.Something went wrong.";
     header('location:registration.php');
     // code...
   }
