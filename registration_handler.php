@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
   }
   if ($result) {
 
-    $_SESSION['login_success']="Your account has been successfully registered.You can login now."; 
+     $_SESSION['login_success']="Your account has been successfully registered.You can login now."; 
 
     header('location:login.php');
     // code...
