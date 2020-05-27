@@ -7,6 +7,14 @@
     include 'bootstrap.php';
     include 'db.php';
     ?>
+    <style media="screen">
+      .mine{
+        border:1px solid #dedede;
+      }
+      .post{
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -18,18 +26,12 @@
       }
       if (isset($_SESSION['username'])) {
         ?>
-        <h2>Welcome <?php echo $_SESSION['name'] ; ?>!</h2>
-        <h3>username: <?php echo $_SESSION['username'] ; ?>!</h2>
-        <h3>email : <?php echo $_SESSION['email'] ; ?>!</h2>
-          <h3>To visit our page.</h3>
-        <a class="btn btn-primary" href="visit_page.php">Click here</a>
-       <a class="btn btn-danger" href="logout.php">Logout</a>
        <div class="all-posts">
          <hr>
          <h3>Your Posts</h3>
          <?php
          $login_id = $_SESSION['id'];
-         $sql = "SELECT * FROM user_posts where author_id='$login_id'";
+         $sql = "SELECT * FROM user_posts";
          $query = mysqli_query($con,$sql);
          if(mysqli_affected_rows($con)){
         while ($row = mysqli_fetch_array($query)) {
@@ -37,12 +39,23 @@
           $sql2 = "SELECT name from users where id='$author_id'";
           $query2 = mysqli_query($con,$sql2);
           $author = mysqli_fetch_row($query2)[0];
+          if($author_id==$login_id){
+            $classx= "mine";
+          }else{
+            $classx="";
+          }
           ?>
-          <div class="post">
+          <div class="post <?php echo $classx ?>">
             <h4><?php echo $row['title'] ?></h4>
             <p><?php echo $row['content'] ?>
               created by <?php echo $author ?> on
-              <?php echo $row['created_at'] ?>
+              <?php echo $row['created_at'] ;
+              if ($author_id==$login_id) {
+
+              ?>
+              <a href="edit_post.php?post_id=<?php echo $row['id'] ?>" class="btn btn-primary">Edit</a>
+              <a href="delete_post.php?post_id=<?php echo $row['id'] ?>" class="btn btn-danger">Delete</a>
+            <?php } ?>
             </p>
           </div>
 
