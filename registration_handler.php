@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
   $username = $_POST['username'];
   $name = $_POST['name'];
   $email = $_POST['mail'];
-  $pass = $_POST['pword'];
+  $pass = md5($_POST['pword']);
   $gender = $_POST['gender'];
   $dob = $_POST['dob'];
   $age = $_POST['age'];

@@ -33,7 +33,7 @@
       <li class="active"> <a href="#">Profile</a> </li>
 
       <li class="active"> <a href="#">Notification</a> </li>
-      <li class="active"> <a href="#">Settings</a> </li>
+      <li class="active"> <a href="settings.php">Settings</a> </li>
       </ul>
       <br>
       <input type="search" name="search" /> <input type="submit" value="Search" /> <br>
