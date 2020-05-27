@@ -28,9 +28,12 @@ if (isset($_SESSION['Success'])) {
   // code...
 }
 ?>
-<input type="email" class="form-control" name="email" value=""> <br>
-<input type="password" class="form-control" name="pass" value=""> <br>
+<h4>Enter your email address and Password.</h4><br>
+
+Email:<input type="email" class="form-control" name="email" value=""> <br>
+Password:<input type="password" class="form-control" name="pass" value=""> <br>
 <input type="submit" class="form-control"name="" value="Login">
+
     </form>
   </div>
   </body>

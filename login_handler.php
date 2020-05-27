@@ -19,7 +19,7 @@ if (session_status()==PHP_SESSION_NONE) {
     $_SESSION['name']=$data['name'];
     $_SESSION['username']=$data['username'];
     $_SESSION['email']=$data['email'];
-    $_SESSION['password']=$data['password'];
+    $_SESSION['id']=$data['id'];
     header('location:index.php');
     // code...
   }
