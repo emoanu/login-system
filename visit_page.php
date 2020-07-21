@@ -27,14 +27,26 @@
         <div class="row content">
     <div class="col-sm-3 sidenav">
     <h2>YourBlog</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li class="active" > <a href="index.php">Home</a> </li><br>
-    <br>
-      <li class="active"> <a href="#">Profile</a> </li>
+    <!-- nav nav-pills nav-stacked -->
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active" >
+           <a href="index.php">Home</a>
+         </li>
 
-      <li class="active"> <a href="#">Notification</a> </li>
-      <li class="active"> <a href="settings.php">Settings</a> </li>
-      </ul>
+        <li class="nav-item">
+          <a href="#">Profile</a>
+        </li>
+
+        <li class="nav-item">
+        <a href="#">Notification</a>
+        </li>
+        <li class="nav-item">
+        <a href="settings.php">Settings</a>
+      </li>
+        </ul>
+    </nav>
+
       <br>
       <input type="search" name="search" /> <input type="submit" value="Search" /> <br>
       <br>

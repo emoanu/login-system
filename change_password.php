@@ -19,8 +19,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         echo "Your password has been successfully changed";
         }
     else {
-      echo "Oops!Something went wrong.Retype your new password.";
+
     //header('location:settings.php');
+    echo "Oops!Something went wrong.Retype your new password.";
     }
   }else{
     echo "old password is incorrect";
